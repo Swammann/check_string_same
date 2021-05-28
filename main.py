@@ -24,15 +24,27 @@ def readString():
 
 
 def spaceStrip(string_list):
-    strip = []
+    strip_list = []
     for line in string_list:
-        string_list.strip()
+        strip = line.strip()
+        strip_list.append(strip)
+    return strip_list
 
 
-def checkString():
-    ...
+def checkString(string_1, string_2):
+    same = None
+    for i in string_1:
+        if string_1[i] == string_2[i]:
+            same = 'These files contain matching strings'
+        else:
+            same = "These files don't contain any matching strings"
+    return same
 
 
 if __name__ == '__main__':
-    string = readString()
+    string1 = readString()
+    string2 = readString()
+    stripped1 = spaceStrip(string1)
+    stripped2 = spaceStrip(string2)
+    print(checkString(stripped1, stripped2))
 
