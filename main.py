@@ -15,12 +15,13 @@ def readString():
             splitline = in_string.split(',')
             for i in range(int(nstring)):
                 string.append(splitline[i])
+            stripped = spaceStrip(string)
     except OSError as err:
         print(' -- Error with file open -- ')
         print(err)
         print()
     f.close()
-    return string
+    return stripped
 
 
 def spaceStrip(string_list):
@@ -33,7 +34,7 @@ def spaceStrip(string_list):
 
 def checkString(string_1, string_2):
     same = None
-    for i in string_1:
+    for i in range(len(string_1)):
         if string_1[i] == string_2[i]:
             same = 'These files contain matching strings'
         else:
@@ -41,10 +42,13 @@ def checkString(string_1, string_2):
     return same
 
 
-if __name__ == '__main__':
+def main():
     string1 = readString()
     string2 = readString()
-    stripped1 = spaceStrip(string1)
-    stripped2 = spaceStrip(string2)
-    print(checkString(stripped1, stripped2))
+    print(checkString(string1, string2))
+
+
+if __name__ == '__main__':
+    main()
+
 
