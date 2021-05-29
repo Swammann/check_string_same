@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/check_string_same.iml" filepath="$PROJECT_DIR$/.idea/check_string_same.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tkinterlearn/.idea/tkinterlearn.iml" filepath="$PROJECT_DIR$/../tkinterlearn/.idea/tkinterlearn.iml" />
     </modules>
   </component>
 </project>
