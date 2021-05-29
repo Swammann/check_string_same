@@ -1,4 +1,0 @@
-string1.00, string1.10, string1.20,
-string2.00, string2.1, string2.2,
-string3, string3.1, string3.2,
-string4, string4.1, string4.2
